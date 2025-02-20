@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Nimmy</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background: linear-gradient(to bottom right, #ffccff, #ff99cc);
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .container {
+            margin-top: 10%;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            display: inline-block;
+            animation: slideIn 2s ease-in-out;
+        }
+
+        h1 {
+            color: #420b26;
+            font-size: 48px;
+            animation: glow 1.5s infinite alternate;
+        }
+
+        p {
+            font-size: 24px;
+            color: #660033;
+            margin: 10px 0;
+            animation: fadeIn 4s ease-in-out;
+        }
+
+        .balloons {
+            font-size: 60px;
+            animation: float 3s infinite alternate;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes float {
+            from {
+                transform: translateY(0px);
+            }
+
+            to {
+                transform: translateY(-20px);
+            }
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 10px rgb(186, 50, 118), 0 0 20px hsl(307, 74%, 43%), 0 0 30px hsl(330, 75%, 53%);
+            }
+
+            to {
+                text-shadow: 0 0 20px hsl(330, 62%, 37%), 0 0 30px rgb(222, 27, 160), 0 0 40px #ff3399;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(-100%);
+            }
+
+            to {
+                transform: translateX(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>🎉 Happy Birthday, Nimmy! 🎂</h1>
+        <p>May your day be filled with joy, laughter, and love! 💖</p>
+        <p>Wishing you all the happiness in the world! 🌟</p>
+        <div class="balloons">
+            🎈🎈🎈🎈🎈
+        </div>
+        <img id="Image" onclick="turnOnOff()" src="E:\vscode\baloon.jpg" alt="Balloon Image">
+
+    </div>
+
+    <script>
+        function turnOnOff() {
+            let image = document.getElementById('Image');
+            if (image.src.includes("baloon.jpg")) {
+                image.src = "nimmy.jpg";
+            } else {
+                image.src = "baloon.jpg";
+            }
+        }
+    </script>
+</body>
+
+</html>
